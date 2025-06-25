@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: #f7f7f7;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+
+#header-container {
+  width: 100%;
+}
+
+.widgets-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 2.5rem auto 0 auto;
+  padding: 0 1.2rem 2rem 1.2rem;
+}
+
+.widget {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(75,46,131,0.08), 0 1.5px 6px rgba(0,0,0,0.04);
+  padding: 2rem 1.2rem 1.5rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  min-height: 180px;
+}
+
+.widget-24h {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  color: #3a2c1a;
+}
+
+.widget-week {
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  color: #1a2a3a;
+}
+
+.widget-month {
+  background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+  color: #3a1a2a;
+}
+
+.widget:hover {
+  box-shadow: 0 8px 32px rgba(75,46,131,0.13), 0 2px 8px rgba(0,0,0,0.06);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.widget h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 0.7rem 0;
+  text-align: center;
+}
+
+.widget-value {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  letter-spacing: 1px;
+}
+
+.widget-desc {
+  font-size: 1rem;
+  text-align: center;
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .widgets-container {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 0 0.5rem 1.2rem 0.5rem;
+  }
+  .widget {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    min-height: 120px;
+  }
+  .widget h2 {
+    font-size: 1.02rem;
+  }
+  .widget-value {
+    font-size: 1.5rem;
+  }
+  .widget-desc {
+    font-size: 0.95rem;
+  }
+}
+
+.mini-widgets-container {
+  display: flex;
+  gap: 1.2rem;
+  max-width: 1100px;
+  margin: 1.2rem auto 0 auto;
+  padding: 0 1.2rem 2rem 1.2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.mini-widget {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(75,46,131,0.07), 0 1px 4px rgba(0,0,0,0.03);
+  padding: 1.1rem 1.2rem 0.9rem 1.2rem;
+  min-width: 160px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  font-size: 1rem;
+}
+
+.mini-widget-devices {
+  background: linear-gradient(135deg, #f9ffb7 0%, #b7ffd8 100%);
+  color: #2a3a1a;
+}
+
+.mini-widget-status {
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  color: #2a1a3a;
+}
+
+.mini-widget-title {
+  font-size: 1.01rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+.mini-widget-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.1rem;
+}
+
+.mini-widget-status-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.2rem;
+}
+
+.mini-widget-status-list.vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  display: flex;
+}
+
+.device-status-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 0.1rem;
+}
+
+.device-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: inherit;
+}
+
+.device-status {
+  padding: 0.18rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: #fff;
+  background: #bbb;
+  margin-bottom: 0.1rem;
+}
+.device-status.online {
+  background: #4caf50;
+}
+.device-status.offline {
+  background: #e53935;
+}
+
+@media (max-width: 600px) {
+  .mini-widgets-container {
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 0 0.5rem 1.2rem 0.5rem;
+  }
+  .mini-widget {
+    min-width: 120px;
+    min-height: 60px;
+    padding: 0.7rem 0.7rem 0.6rem 0.7rem;
+    font-size: 0.97rem;
+  }
+  .mini-widget-title {
+    font-size: 0.97rem;
+  }
+  .mini-widget-value {
+    font-size: 1.15rem;
+  }
+  .mini-widget-status-list {
+    font-size: 0.95rem;
+  }
+}
+
+.status-circle {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  background: #bbb;
+  box-shadow: 0 0 2px #888;
+}
+.status-circle.offline {
+  background: #e53935;
+}
+.status-circle.online {
+  background: #4caf50;
+} 

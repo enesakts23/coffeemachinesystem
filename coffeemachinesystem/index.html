@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Machine System</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="header.css">
+</head>
+<body>
+  <!-- Header Component -->
+  <div id="header-container"></div>
+
+  <!-- Widgetlar -->
+  <main class="widgets-container">
+    <div class="widget widget-24h">
+      <h2>24 Saatlik Kahve Satışı</h2>
+      <div class="widget-value" id="coffee-24h">0</div>
+    </div>
+    <div class="widget widget-week">
+      <h2>Haftalık Kahve Satışı</h2>
+      <div class="widget-value" id="coffee-week">0</div>
+    </div>
+    <div class="widget widget-month">
+      <h2>Aylık Kahve Satışı</h2>
+      <div class="widget-value" id="coffee-month">0</div>
+    </div>
+  </main>
+
+  <!-- Küçük Widgetlar -->
+  <section class="mini-widgets-container">
+    <div class="mini-widget mini-widget-devices">
+      <div class="mini-widget-title">Aktif Cihaz Sayısı</div>
+      <div class="mini-widget-value" id="active-devices">0</div>
+    </div>
+    <div class="mini-widget mini-widget-status">
+      <div class="mini-widget-title">Cihaz Durumu</div>
+      <div class="mini-widget-status-list vertical" id="device-status-list">
+        <div class="device-status-row"><span class="status-circle offline"></span><span class="device-label">cihaz-1</span></div>
+        <div class="device-status-row"><span class="status-circle offline"></span><span class="device-label">cihaz-2</span></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="header.js"></script>
+  <script src="index.js"></script>
+</body>
+</html> 
