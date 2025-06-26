@@ -6,10 +6,35 @@
   <title>Geçmiş Veriler - Coffee Machine System</title>
   <link rel="stylesheet" href="history.css">
   <link rel="stylesheet" href="header.css">
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body>
   <!-- Header Component -->
   <div id="header-container"></div>
+
+  <!-- Grafikler -->
+  <main class="charts-container">
+    <div class="chart-section">
+      <h2>Günlük Kahve Satış Grafiği</h2>
+      <div class="chart-card">
+        <div id="daily-sales-chart"></div>
+      </div>
+    </div>
+
+    <div class="chart-section">
+      <h2>Aylık Satış Trendi</h2>
+      <div class="chart-card">
+        <div id="monthly-trend-chart"></div>
+      </div>
+    </div>
+
+    <div class="chart-section">
+      <h2>Günlük Satış Karşılaştırması</h2>
+      <div class="chart-card">
+        <div id="comparison-chart"></div>
+      </div>
+    </div>
+  </main>
 
   <script src="header.js"></script>
   <script src="history.js"></script>
