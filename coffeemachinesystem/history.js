@@ -3,15 +3,9 @@ fetch('header.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('header-container').innerHTML = data;
-    // Header yüklendikten sonra header.js'i yükle
-    var script = document.createElement('script');
-    script.src = 'header.js';
-    script.onload = function() {
-      if (window.setupHeaderEvents) window.setupHeaderEvents();
-      // Grafikleri oluştur
-      createCharts();
-    };
-    document.body.appendChild(script);
+    // Header yüklendikten sonra eventleri başlat ve grafikleri oluştur
+    if (window.setupHeaderEvents) window.setupHeaderEvents();
+    createCharts();
   });
 
 // Grafikleri oluştur
@@ -163,3 +157,9 @@ function createCharts() {
   new ApexCharts(document.querySelector("#monthly-trend-chart"), monthlyTrendOptions).render();
   new ApexCharts(document.querySelector("#comparison-chart"), comparisonOptions).render();
 }
+
+// MQTT mesajlarını sadece konsolda görmek için event listener ekle
+window.addEventListener('mqttMessage', function(e) {
+  const { topic, payload } = e.detail;
+  console.log('[history.js] MQTT Mesajı:', topic, payload);
+});
