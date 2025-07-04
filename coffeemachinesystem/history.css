@@ -51,6 +51,33 @@ body {
   height: 100%;
 }
 
+/* ApexCharts özelleştirmeleri */
+.apexcharts-tooltip {
+  background: #fff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.apexcharts-tooltip-title {
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+  padding: 8px 12px;
+  font-weight: 600;
+}
+
+.apexcharts-xaxis-label,
+.apexcharts-yaxis-label {
+  font-size: 12px;
+  fill: #666;
+}
+
+.apexcharts-legend-text {
+  color: #333 !important;
+  font-size: 12px;
+}
+
+/* Responsive düzenlemeler */
 @media (max-width: 768px) {
   .charts-container {
     gap: 1.5rem;
@@ -66,4 +93,34 @@ body {
     padding: 0.8rem 1.2rem 1.2rem 1.2rem;
     min-height: 300px;
   }
+}
+
+/* Yükleme animasyonu */
+.chart-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.chart-loading::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #4b2e83;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

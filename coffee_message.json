@@ -1,0 +1,322 @@
+[
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 22:43:03",
+    "message_id": 1
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 22:43:23",
+    "message_id": 2
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 22:43:43",
+    "message_id": 1
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 22:44:03",
+    "message_id": 2
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 22:44:23",
+    "message_id": 3
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 22:44:44",
+    "message_id": 4
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 22:45:03",
+    "message_id": 5
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 22:45:23",
+    "message_id": 6
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 22:45:43",
+    "message_id": 7
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 22:46:03",
+    "message_id": 8
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 22:46:23",
+    "message_id": 9
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 22:46:43",
+    "message_id": 10
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 22:47:03",
+    "message_id": 11
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 22:47:23",
+    "message_id": 12
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 22:47:43",
+    "message_id": 13
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:02:36",
+    "message_id": 1
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:02:56",
+    "message_id": 2
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:03:16",
+    "message_id": 3
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:03:36",
+    "message_id": 4
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:03:56",
+    "message_id": 5
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:04:16",
+    "message_id": 6
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:04:36",
+    "message_id": 7
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:04:56",
+    "message_id": 8
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:05:16",
+    "message_id": 9
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:05:36",
+    "message_id": 10
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:05:56",
+    "message_id": 11
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:06:16",
+    "message_id": 12
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:06:36",
+    "message_id": 13
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:06:56",
+    "message_id": 14
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:07:16",
+    "message_id": 15
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:07:36",
+    "message_id": 16
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:07:56",
+    "message_id": 17
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:08:16",
+    "message_id": 18
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:08:36",
+    "message_id": 19
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:08:56",
+    "message_id": 20
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:09:16",
+    "message_id": 21
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:09:36",
+    "message_id": 22
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:09:56",
+    "message_id": 23
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:10:16",
+    "message_id": 24
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:10:36",
+    "message_id": 25
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:10:56",
+    "message_id": 26
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:11:16",
+    "message_id": 27
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:11:36",
+    "message_id": 28
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:11:56",
+    "message_id": 29
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:12:16",
+    "message_id": 30
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:12:36",
+    "message_id": 31
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:12:56",
+    "message_id": 32
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:13:16",
+    "message_id": 33
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:13:36",
+    "message_id": 34
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:13:56",
+    "message_id": 35
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:14:16",
+    "message_id": 36
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:14:36",
+    "message_id": 37
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:14:56",
+    "message_id": 38
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:15:16",
+    "message_id": 39
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:15:36",
+    "message_id": 40
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:15:56",
+    "message_id": 41
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:16:16",
+    "message_id": 42
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:16:36",
+    "message_id": 43
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:16:56",
+    "message_id": 44
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:17:16",
+    "message_id": 45
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:17:36",
+    "message_id": 46
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:17:56",
+    "message_id": 47
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000002\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:18:16",
+    "message_id": 48
+  },
+  {
+    "message": "{\"firma_adi\": \"espressolab\", \"sube_adi\": \"tuzla\", \"device_id\": \"0000001\", \"count\": 1}",
+    "timestamp": "04/07/2025 23:18:36",
+    "message_id": 49
+  }
+]

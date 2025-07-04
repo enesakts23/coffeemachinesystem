@@ -30,6 +30,37 @@
 
     mqttClient.onMessageArrived = function(message) {
       console.log('[MQTT] Mesaj geldi:', message.destinationName, message.payloadString);
+      
+      // Yeni mesajı JSON dosyasına kaydet
+      const messageData = {
+        message: message.payloadString,
+        timestamp: new Date().toLocaleString('tr-TR', { 
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        }).replace(',', ''),
+        message_id: Date.now()
+      };
+
+      // Mevcut JSON dosyasını oku ve güncelle
+      fetch('../coffee_message.json')
+        .then(response => response.json())
+        .then(data => {
+          data.push(messageData);
+          return fetch('../coffee_message.json', {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data, null, 2)
+          });
+        })
+        .catch(error => console.error('JSON güncelleme hatası:', error));
+
+      // Event'i tetikle
       if (typeof window !== 'undefined' && window.dispatchEvent) {
         const event = new CustomEvent('mqttMessage', {
           detail: { topic: message.destinationName, payload: message.payloadString }

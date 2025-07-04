@@ -3,18 +3,67 @@ fetch('header.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('header-container').innerHTML = data;
-    // Header yüklendikten sonra eventleri başlat ve grafikleri oluştur
     if (window.setupHeaderEvents) window.setupHeaderEvents();
-    createCharts();
   });
 
-// Grafikleri oluştur
-function createCharts() {
-  // 1. Günlük Kahve Satış Grafiği (Line Chart)
-  const dailySalesOptions = {
+// Grafikleri oluştur ve güncelle
+function updateCharts() {
+  fetch('../coffee_message.json')
+    .then(response => response.json())
+    .then(data => {
+      const processedData = processData(data);
+      createDailyChart(processedData.dailyData);
+      createMonthlyChart(processedData.monthlyData);
+      createComparisonChart(processedData.comparisonData);
+    })
+    .catch(error => console.error('Veri yüklenirken hata:', error));
+}
+
+function processData(data) {
+  const dailyData = {};
+  const monthlyData = {};
+  const deviceData = {};
+
+  data.forEach(entry => {
+    try {
+      const messageData = JSON.parse(entry.message);
+      const timestamp = new Date(entry.timestamp.replace(/(\d{2})\/(\d{2})\/(\d{4})/, '$3-$2-$1'));
+      const count = parseInt(messageData.count) || 0;
+      const deviceId = messageData.device_id;
+
+      // Günlük veri
+      const dateKey = timestamp.toISOString().split('T')[0];
+      dailyData[dateKey] = (dailyData[dateKey] || 0) + count;
+
+      // Aylık veri
+      const monthKey = `${timestamp.getFullYear()}-${String(timestamp.getMonth() + 1).padStart(2, '0')}`;
+      monthlyData[monthKey] = (monthlyData[monthKey] || 0) + count;
+
+      // Cihaz bazlı veri
+      if (!deviceData[deviceId]) {
+        deviceData[deviceId] = {};
+      }
+      deviceData[deviceId][dateKey] = (deviceData[deviceId][dateKey] || 0) + count;
+    } catch (error) {
+      console.error('Veri işleme hatası:', error);
+    }
+  });
+
+  return {
+    dailyData: dailyData,
+    monthlyData: monthlyData,
+    comparisonData: deviceData
+  };
+}
+
+function createDailyChart(dailyData) {
+  const dates = Object.keys(dailyData).sort();
+  const values = dates.map(date => dailyData[date]);
+
+  const options = {
     series: [{
       name: 'Kahve Satışı',
-      data: [12, 19, 15, 25, 22, 30, 28, 35, 32, 40, 38, 45, 42, 50, 48, 55, 52, 60, 58, 65, 62, 70, 68, 75, 72, 80, 78, 85, 82, 90]
+      data: values
     }],
     chart: {
       type: 'line',
@@ -29,11 +78,12 @@ function createCharts() {
       width: 3
     },
     xaxis: {
-      categories: Array.from({length: 30}, (_, i) => `${i + 1} Gün`),
+      categories: dates,
       labels: {
         style: {
           colors: '#666'
-        }
+        },
+        rotate: -45
       }
     },
     yaxis: {
@@ -57,15 +107,22 @@ function createCharts() {
     }
   };
 
-  // 2. Aylık Satış Trendi (Area Chart)
-  const monthlyTrendOptions = {
-    series: [{
-      name: 'Ocak', data: [120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 320, 340]
-    }, {
-      name: 'Şubat', data: [150, 170, 190, 210, 230, 250, 270, 290, 310, 330, 350, 370]
-    }, {
-      name: 'Mart', data: [180, 200, 220, 240, 260, 280, 300, 320, 340, 360, 380, 400]
-    }],
+  const chart = new ApexCharts(document.querySelector("#daily-sales-chart"), options);
+  chart.render();
+}
+
+function createMonthlyChart(monthlyData) {
+  const months = Object.keys(monthlyData).sort();
+  const values = months.map(month => monthlyData[month]);
+
+  // Her ay için ayrı seri oluştur
+  const series = months.map(month => ({
+    name: month,
+    data: Array(12).fill(0).map((_, i) => i === months.indexOf(month) ? monthlyData[month] : null)
+  }));
+
+  const options = {
+    series: series,
     chart: {
       type: 'area',
       height: 450,
@@ -104,15 +161,27 @@ function createCharts() {
     }
   };
 
-  // 3. Günlük Satış Karşılaştırması (Bar Chart)
-  const comparisonOptions = {
-    series: [{
-      name: 'Bu Hafta',
-      data: [44, 55, 57, 56, 61, 58, 63]
-    }, {
-      name: 'Geçen Hafta',
-      data: [35, 41, 36, 26, 45, 48, 52]
-    }],
+  const chart = new ApexCharts(document.querySelector("#monthly-trend-chart"), options);
+  chart.render();
+}
+
+function createComparisonChart(deviceData) {
+  const devices = Object.keys(deviceData);
+  const dates = new Set();
+  devices.forEach(device => {
+    Object.keys(deviceData[device]).forEach(date => dates.add(date));
+  });
+  const sortedDates = Array.from(dates).sort();
+
+  // Son 7 günün verilerini al
+  const last7Days = sortedDates.slice(-7);
+  const thisWeekData = devices.map(device => ({
+    name: `Cihaz ${device}`,
+    data: last7Days.map(date => deviceData[device][date] || 0)
+  }));
+
+  const options = {
+    series: thisWeekData,
     chart: {
       type: 'bar',
       height: 450,
@@ -132,11 +201,12 @@ function createCharts() {
       enabled: false
     },
     xaxis: {
-      categories: ['Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi', 'Pazar'],
+      categories: last7Days,
       labels: {
         style: {
           colors: '#666'
-        }
+        },
+        rotate: -45
       }
     },
     yaxis: {
@@ -152,14 +222,17 @@ function createCharts() {
     }
   };
 
-  // Grafikleri oluştur
-  new ApexCharts(document.querySelector("#daily-sales-chart"), dailySalesOptions).render();
-  new ApexCharts(document.querySelector("#monthly-trend-chart"), monthlyTrendOptions).render();
-  new ApexCharts(document.querySelector("#comparison-chart"), comparisonOptions).render();
+  const chart = new ApexCharts(document.querySelector("#comparison-chart"), options);
+  chart.render();
 }
 
-// MQTT mesajlarını sadece konsolda görmek için event listener ekle
+// İlk yükleme
+updateCharts();
+
+// Her 30 saniyede bir güncelle
+setInterval(updateCharts, 30000);
+
+// MQTT mesajı geldiğinde grafikleri güncelle
 window.addEventListener('mqttMessage', function(e) {
-  const { topic, payload } = e.detail;
-  console.log('[history.js] MQTT Mesajı:', topic, payload);
+  updateCharts();
 });
